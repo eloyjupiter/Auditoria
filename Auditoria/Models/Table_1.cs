@@ -43,8 +43,10 @@ namespace Auditoria.Models
         public int Digitador { get; set; }
         public string Dia { get; set; }
         public string Mes { get; set; }
+        public int EntrevistaFk { get; set; }
     
         public virtual Digitadores Digitadores { get; set; }
+        public virtual Entrevista Entrevista { get; set; }
         public virtual Indicadores Indicadores { get; set; }
         public virtual P10Re P10Re { get; set; }
         public virtual P12Re P12Re { get; set; }

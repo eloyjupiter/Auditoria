@@ -4,22 +4,24 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="65c54259b4af40e7976bc5422e67c6b7" Name="Diagram1" ZoomLevel="64">
-        <EntityTypeShape EntityType="AuditoriaPOAModel.Digitadores" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="AuditoriaPOAModel.Indicadores" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AuditoriaPOAModel.P10Re" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="AuditoriaPOAModel.P12Re" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AuditoriaPOAModel.P1Sexo" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AuditoriaPOAModel.P2Re" Width="1.5" PointX="0.75" PointY="17.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AuditoriaPOAModel.P3bRe" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AuditoriaPOAModel.P4Re" Width="1.5" PointX="0.75" PointY="22.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AuditoriaPOAModel.P7Re" Width="1.5" PointX="0.75" PointY="24.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AuditoriaPOAModel.Provincias" Width="1.5" PointX="0.75" PointY="26.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AuditoriaPOAModel.Regiones" Width="1.5" PointX="0.75" PointY="29.375" IsExpanded="true" />
+      <Diagram DiagramId="629c1a0e2eb64ed28e46115941c13540" Name="Diagram1" ZoomLevel="59">
+        <EntityTypeShape EntityType="AuditoriaPOAModel.Digitadores" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuditoriaPOAModel.Entrevista" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuditoriaPOAModel.Indicadores" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuditoriaPOAModel.P10Re" Width="1.5" PointX="0.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuditoriaPOAModel.P12Re" Width="1.5" PointX="0.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuditoriaPOAModel.P1Sexo" Width="1.5" PointX="0.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuditoriaPOAModel.P2Re" Width="1.5" PointX="0.75" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuditoriaPOAModel.P3bRe" Width="1.5" PointX="0.75" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuditoriaPOAModel.P4Re" Width="1.5" PointX="0.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuditoriaPOAModel.P7Re" Width="1.5" PointX="0.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuditoriaPOAModel.Provincias" Width="1.5" PointX="0.75" PointY="29.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuditoriaPOAModel.Regiones" Width="1.5" PointX="0.75" PointY="31.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AuditoriaPOAModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AuditoriaPOAModel.Table_1" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AuditoriaPOAModel.Visitas" Width="1.5" PointX="0.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AuditoriaPOAModel.Visitas" Width="1.5" PointX="0.75" PointY="34.25" IsExpanded="true" />
         <AssociationConnector Association="AuditoriaPOAModel.FK_Table_1_Digitadores" ManuallyRouted="false" />
+        <AssociationConnector Association="AuditoriaPOAModel.FK_Table_1_Entrevista" ManuallyRouted="false" />
         <AssociationConnector Association="AuditoriaPOAModel.FK_Table_1_Indicadores" ManuallyRouted="false" />
         <AssociationConnector Association="AuditoriaPOAModel.FK_Table_1_P10R" ManuallyRouted="false" />
         <AssociationConnector Association="AuditoriaPOAModel.FK_Table_1_P12R" ManuallyRouted="false" />

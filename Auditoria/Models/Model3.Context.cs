@@ -13,10 +13,10 @@ namespace Auditoria.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AuditoriaPOAEntities1 : DbContext
+    public partial class AuditoriaPOAEntities2 : DbContext
     {
-        public AuditoriaPOAEntities1()
-            : base("name=AuditoriaPOAEntities1")
+        public AuditoriaPOAEntities2()
+            : base("name=AuditoriaPOAEntities2")
         {
         }
     
@@ -26,6 +26,7 @@ namespace Auditoria.Models
         }
     
         public virtual DbSet<Digitadores> Digitadores { get; set; }
+        public virtual DbSet<Entrevista> Entrevista { get; set; }
         public virtual DbSet<Indicadores> Indicadores { get; set; }
         public virtual DbSet<P10Re> P10Re { get; set; }
         public virtual DbSet<P12Re> P12Re { get; set; }

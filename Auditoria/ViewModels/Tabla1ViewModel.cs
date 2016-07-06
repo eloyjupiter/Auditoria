@@ -57,6 +57,7 @@ namespace Auditoria.ViewModels
         public string P13 { get; set; }
         public string P14 { get; set; }
         public string Digitador { get; set; }
+        public string Entrevista { get; set; }
 
     }
 }

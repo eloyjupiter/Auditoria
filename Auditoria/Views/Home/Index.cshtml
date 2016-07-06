@@ -42,171 +42,147 @@
                     @Html.TextBoxFor(m => m.Año, new { style = "width:60px", id = "año", tabindex = "5", onkeydown = "return tab(this, event)" })
                 </div>
         <div class="col-sm-1">
-            <h5>Persona responsable:</h5>
+            <h5>Persona entrevistada:</h5>
         </div>
-                <div class="col-sm-1">
-                    @Html.TextBoxFor(m => m.Responsable, new { id = "resp", tabindex = "6", onkeydown = "return tab(this, event)" })
-                </div>
+        <div class="col-sm-1">
+            @Html.TextBoxFor(m => m.Entrevistada, new { style = "width:90px", id = "entrev", tabindex = "6", onkeydown = "return tab(this, event)" })
+        </div>
+       
         </div>
 
         <div class="row">
             <div class="col-sm-1">
+                <h5>Persona responsable:</h5>
+            </div>
+            <div class="col-sm-1">
+                @Html.TextBoxFor(m => m.Responsable, new { style = "width:90px", id = "resp", tabindex = "7", onkeydown = "return tab(this, event)" })
+            </div>
+            <div class="col-sm-1">
                 <h5>P1:</h5>
             </div>
             <div class="col-sm-1">
-                @Html.TextBoxFor(m => m.P1, new { style = "width:30px", id = "entrev", tabindex = "7", onkeydown = "return tab(this, event)" })
+                @Html.TextBoxFor(m => m.P1, new { style = "width:30px", id = "p1", tabindex = "8", onkeydown = "return tab(this, event)" })
             </div>
             <div class="col-sm-1">
                 <h5>P2:</h5>
             </div>
             <div class="col-sm-1">
-                @Html.TextBoxFor(m => m.P2, new { style = "width:30px", id = "entrev", tabindex = "8", onkeydown = "return tab(this, event)" })
+                @Html.TextBoxFor(m => m.P2, new { style = "width:30px", id = "p2", tabindex = "9", onkeydown = "return tab(this, event)" })
             </div>
             <div class="col-sm-1">
                 <h5>P3a:</h5>
             </div>
             <div class="col-sm-1">
-                @Html.TextBoxFor(m => m.P3a, new { style = "width:30px", id = "entrev", tabindex = "9", onkeydown = "return tab(this, event)" })
+                @Html.TextBoxFor(m => m.P3a, new { style = "width:30px", id = "p3a", tabindex = "10", onkeydown = "return tab(this, event)" })
             </div>
             <div class="col-sm-1">
                 <h5>P3b:</h5>
             </div>
             <div class="col-sm-1">
-                @Html.TextBoxFor(m => m.P3b, new { style = "width:30px", id = "entrev", tabindex = "10", onkeydown = "return tab(this, event)" })
+                @Html.TextBoxFor(m => m.P3b, new { style = "width:30px", id = "p3b", tabindex = "11", onkeydown = "return tab(this, event)" })
             </div>
             <div class="col-sm-1">
                 <h5>P4:</h5>
             </div>
             <div class="col-sm-1">
-                @Html.TextBoxFor(m => m.P4, new { style = "width:30px", id = "entrev", tabindex = "11", onkeydown = "return tab(this, event)" })
+                @Html.TextBoxFor(m => m.P4, new { style = "width:30px", id = "p4", tabindex = "12", onkeydown = "return tab(this, event)" })
             </div>
-            <div class="col-sm-1">
-                <h5>P5:</h5>
-            </div>
-            <div class="col-sm-1">
-                @Html.TextAreaFor(m => m.P5, new { id = "entrev", tabindex = "12", onkeydown = "return tab(this, event)" })
-            </div>
+            
             </div>
             <div class="row">
+                <div class="col-sm-1">
+                    <h5>P5:</h5>
+                </div>
+                <div class="col-sm-1">
+                    @Html.TextAreaFor(m => m.P5, new { style = "width:90px", id = "p5", tabindex = "13", onkeydown = "return tab(this, event)" })
+                </div>
                 <div class="col-sm-1">
                     <h5>P6:</h5>
                 </div>
                 <div class="col-sm-1">
-                    @Html.TextAreaFor(m => m.P6, new { style = "width:90px", id = "entrev", tabindex = "13", onkeydown = "return tab(this, event)" })
+                    @Html.TextAreaFor(m => m.P6, new { style = "width:90px", id = "p6", tabindex = "14", onkeydown = "return tab(this, event)" })
                 </div>
                 <div class="col-sm-1">
                     <h5>P7:</h5>
                 </div>
                 <div class="col-sm-1">
-                    @Html.TextBoxFor(m => m.P7, new { style = "width:30px", id = "entrev", tabindex = "14", onkeydown = "return tab(this, event)" })
+                    @Html.TextBoxFor(m => m.P7, new { style = "width:30px", id = "p7", tabindex = "15", onkeydown = "return tab(this, event)" })
                 </div>
                 <div class="col-sm-1">
                     <h5>P8:</h5>
                 </div>
                 <div class="col-sm-1">
-                    @Html.TextAreaFor(m => m.P8, new { style = "width:90px", id = "entrev", tabindex = "15", onkeydown = "return tab(this, event)" })
+                    @Html.TextAreaFor(m => m.P8, new { style = "width:90px", id = "p8", tabindex = "16", onkeydown = "return tab(this, event)" })
                 </div>
                 <div class="col-sm-1">
                     <h5>P9:</h5>
                 </div>
                 <div class="col-sm-1">
-                    @Html.TextAreaFor(m => m.P9, new { style = "width:90px", id = "entrev", tabindex = "16", onkeydown = "return tab(this, event)" })
+                    @Html.TextAreaFor(m => m.P9, new { style = "width:90px", id = "p9", tabindex = "17", onkeydown = "return tab(this, event)" })
                 </div>
                 <div class="col-sm-1">
                     <h5>P10:</h5>
                 </div>
                 <div class="col-sm-1">
-                    @Html.TextBoxFor(m => m.P10, new { style = "width:30px", id = "entrev", tabindex = "17", onkeydown = "return tab(this, event)" })
+                    @Html.TextBoxFor(m => m.P10, new { style = "width:30px", id = "p10", tabindex = "18", onkeydown = "return tab(this, event)" })
                 </div>
-                <div class="col-sm-1">
-                    <h5>P11:</h5>
-                </div>
-                <div class="col-sm-1">
-                    @Html.TextAreaFor(m => m.P11, new { id = "entrev", tabindex = "18", onkeydown = "return tab(this, event)" })
-                </div>
+                
             </div>
+    <br />
                 <div class="row">
+                    <div class="col-sm-1">
+                        <h5>P11:</h5>
+                    </div>
+                    <div class="col-sm-1">
+                        @Html.TextAreaFor(m => m.P11, new { style = "width:90px", id = "p11", tabindex = "19", onkeydown = "return tab(this, event)" })
+                    </div>
                     <div class="col-sm-1">
                         <h5>P12a:</h5>
                     </div>
                     <div class="col-sm-1">
-                        @Html.TextBoxFor(m => m.P12a, new { style = "width:30px", id = "entrev", tabindex = "19", onkeydown = "return tab(this, event)" })
+                        @Html.TextBoxFor(m => m.P12a, new { style = "width:30px", id = "p12a", tabindex = "20", onkeydown = "return tab(this, event)" })
                     </div>
                     <div class="col-sm-1">
                         <h5>P12b:</h5>
                     </div>
                     <div class="col-sm-1">
-                        @Html.TextBoxFor(m => m.P12b, new { style = "width:30px", id = "entrev", tabindex = "20", onkeydown = "return tab(this, event)" })
+                        @Html.TextBoxFor(m => m.P12b, new { style = "width:90px", id = "p12b", tabindex = "21", onkeydown = "return tab(this, event)" })
                     </div>
                     <div class="col-sm-1">
                         <h5>P13:</h5>
                     </div>
                     <div class="col-sm-1">
-                        @Html.TextBoxFor(m => m.P13, new { style = "width:30px", id = "entrev", tabindex = "21", onkeydown = "return tab(this, event)" })
+                        @Html.TextBoxFor(m => m.P13, new { style = "width:30px", id = "p13", tabindex = "22", onkeydown = "return tab(this, event)" })
                     </div>
                     <div class="col-sm-1">
                         <h5>P14:</h5>
                     </div>
                     <div class="col-sm-1">
-                        @Html.TextAreaFor(m => m.P14, new { style = "width:90px", id = "entrev", tabindex = "22", onkeydown = "return tab(this, event)" })
+                        @Html.TextAreaFor(m => m.P14, new { style = "width:90px", id = "p14", tabindex = "23", onkeydown = "return tab(this, event)" })
                     </div>
                     <div class="col-sm-1">
                         <h5>Digitador/a:</h5>
                     </div>
                     <div class="col-sm-1">
-                        @Html.TextBoxFor(m => m.Digitador, new { style = "width:30px", id = "entrev", tabindex = "21", onkeydown = "return tab(this, event)" })
+                        @Html.TextBoxFor(m => m.Digitador, new { style = "width:30px", id = "dig", tabindex = "24", onkeydown = "return tab(this, event)" })
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-sm-1">
+                        <h5>Entrevista:</h5>
+                    </div>
+                    <div class="col-sm-1">
+                        @Html.TextBoxFor(m => m.Entrevista, new { style = "width:30px", id = "dig", tabindex = "25", onkeydown = "return tab(this, event)" })
                     </div>
                 </div>
 
-    @*<table border="1">
-     
-        <tr><td style="text-align:center" colspan="9">Preguntas</td></tr>
-        
-        <tr>
-            <td style="text-align:center">
-                <h5>P9:</h5>
-                @Html.TextAreaFor(m => m.P9, new { id = "entrev", tabindex = "17", onkeydown = "return tab(this, event)" })
-            </td>
-            <td style="text-align:center">
-                <h5>P10:</h5>
-                @Html.TextBoxFor(m => m.P10, new { style = "width:30px", id = "entrev", tabindex = "18", onkeydown = "return tab(this, event)" })
-            </td>
-            <td style="text-align:center">
-                <h5>P11:</h5>
-                @Html.TextAreaFor(m => m.P11, new { id = "entrev", tabindex = "19", onkeydown = "return tab(this, event)" })
-            </td>
-            <td style="text-align:center">
-                <h5>P12a:</h5>
-                @Html.TextBoxFor(m => m.P12a, new { style = "width:30px", id = "entrev", tabindex = "20", onkeydown = "return tab(this, event)" })
-            </td>
-            <td style="text-align:center">
-                <h5>P12b:</h5>
-                @Html.TextBoxFor(m => m.P12b, new { id = "entrev", tabindex = "21", onkeydown = "return tab(this, event)" })
-            </td>
-            <td style="text-align:center">
-                <h5>P13:</h5>
-                @Html.TextBoxFor(m => m.P13, new { style = "width:30px", id = "entrev", tabindex = "22", onkeydown = "return tab(this, event)" })
-            </td>
-            <td style="text-align:center">
-                <h5>P14:</h5>
-                @Html.TextAreaFor(m => m.P14, new { id = "entrev", tabindex = "23", onkeydown = "return tab(this, event)" })
-            </td>
-            <td style="text-align:center">
-                <h5>Digitador(a):</h5>
-                @Html.TextBoxFor(m => m.P7, new { id = "entrev", tabindex = "24", onkeydown = "return tab(this, event)" })
-            </td>
-            <td style="text-align:center">
-                <h5>P8:</h5>
-                @Html.TextAreaFor(m => m.P8, new { id = "entrev", tabindex = "25", onkeydown = "return tab(this, event)" })
-            </td>
-        </tr>
 
-    </table>*@
-    
-    
-    
 
-    <input type="submit" value="Enviar"/>
-}
 
-<script src="~/Validacion.js"></script>
+
+
+                    <input tabindex="25" , type="submit" value="Enviar" />
+                    }
+
+                    <script src="~/Validacion.js"></script>

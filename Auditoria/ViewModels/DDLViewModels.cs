@@ -9,7 +9,7 @@ namespace Auditoria.ViewModels
 {
     public class DDLViewModels
     {
-        AuditoriaPOAEntities1 db = new AuditoriaPOAEntities1();
+        AuditoriaPOAEntities2 db = new AuditoriaPOAEntities2();
 
         public List<SelectListItem> Reg()
         {

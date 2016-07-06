@@ -15,6 +15,13 @@
           <Property Name="Telefono" Type="varchar" MaxLength="50" />
           <Property Name="Clave" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="Entrevista">
+          <Key>
+            <PropertyRef Name="entrevistaPk" />
+          </Key>
+          <Property Name="entrevistaPk" Type="int" Nullable="false" />
+          <Property Name="TipoEntrevista" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="Indicadores">
           <Key>
             <PropertyRef Name="Codigo" />
@@ -131,6 +138,7 @@
           <Property Name="Digitador" Type="int" Nullable="false" />
           <Property Name="Dia" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Mes" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="EntrevistaFk" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Visitas">
           <Key>
@@ -148,6 +156,18 @@
             </Principal>
             <Dependent Role="Table_1">
               <PropertyRef Name="Digitador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_1_Entrevista">
+          <End Role="Entrevista" Type="Self.Entrevista" Multiplicity="1" />
+          <End Role="Table_1" Type="Self.Table_1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Entrevista">
+              <PropertyRef Name="entrevistaPk" />
+            </Principal>
+            <Dependent Role="Table_1">
+              <PropertyRef Name="EntrevistaFk" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -285,6 +305,7 @@
         </Association>
         <EntityContainer Name="AuditoriaPOAModelStoreContainer">
           <EntitySet Name="Digitadores" EntityType="Self.Digitadores" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Entrevista" EntityType="Self.Entrevista" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Indicadores" EntityType="Self.Indicadores" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="P10Re" EntityType="Self.P10Re" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="P12Re" EntityType="Self.P12Re" Schema="dbo" store:Type="Tables" />
@@ -300,6 +321,10 @@
           <EntitySet Name="Visitas" EntityType="Self.Visitas" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Table_1_Digitadores" Association="Self.FK_Table_1_Digitadores">
             <End Role="Digitadores" EntitySet="Digitadores" />
+            <End Role="Table_1" EntitySet="Table_1" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_1_Entrevista" Association="Self.FK_Table_1_Entrevista">
+            <End Role="Entrevista" EntitySet="Entrevista" />
             <End Role="Table_1" EntitySet="Table_1" />
           </AssociationSet>
           <AssociationSet Name="FK_Table_1_Indicadores" Association="Self.FK_Table_1_Indicadores">
@@ -362,6 +387,14 @@
           <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Clave" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Table_1" Relationship="Self.FK_Table_1_Digitadores" FromRole="Digitadores" ToRole="Table_1" />
+        </EntityType>
+        <EntityType Name="Entrevista">
+          <Key>
+            <PropertyRef Name="entrevistaPk" />
+          </Key>
+          <Property Name="entrevistaPk" Type="Int32" Nullable="false" />
+          <Property Name="TipoEntrevista" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Table_1" Relationship="Self.FK_Table_1_Entrevista" FromRole="Entrevista" ToRole="Table_1" />
         </EntityType>
         <EntityType Name="Indicadores">
           <Key>
@@ -489,7 +522,9 @@
           <Property Name="Digitador" Type="Int32" Nullable="false" />
           <Property Name="Dia" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Mes" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="EntrevistaFk" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Digitadores" Relationship="Self.FK_Table_1_Digitadores" FromRole="Table_1" ToRole="Digitadores" />
+          <NavigationProperty Name="Entrevista" Relationship="Self.FK_Table_1_Entrevista" FromRole="Table_1" ToRole="Entrevista" />
           <NavigationProperty Name="Indicadores" Relationship="Self.FK_Table_1_Indicadores" FromRole="Table_1" ToRole="Indicadores" />
           <NavigationProperty Name="P10Re" Relationship="Self.FK_Table_1_P10R" FromRole="Table_1" ToRole="P10Re" />
           <NavigationProperty Name="P12Re" Relationship="Self.FK_Table_1_P12R" FromRole="Table_1" ToRole="P12Re" />
@@ -519,6 +554,18 @@
             </Principal>
             <Dependent Role="Table_1">
               <PropertyRef Name="Digitador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_1_Entrevista">
+          <End Role="Entrevista" Type="Self.Entrevista" Multiplicity="1" />
+          <End Role="Table_1" Type="Self.Table_1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Entrevista">
+              <PropertyRef Name="entrevistaPk" />
+            </Principal>
+            <Dependent Role="Table_1">
+              <PropertyRef Name="EntrevistaFk" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -654,8 +701,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="AuditoriaPOAEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="AuditoriaPOAEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Digitadores" EntityType="Self.Digitadores" />
+          <EntitySet Name="Entrevista" EntityType="Self.Entrevista" />
           <EntitySet Name="Indicadores" EntityType="Self.Indicadores" />
           <EntitySet Name="P10Re" EntityType="Self.P10Re" />
           <EntitySet Name="P12Re" EntityType="Self.P12Re" />
@@ -671,6 +719,10 @@
           <EntitySet Name="Visitas" EntityType="Self.Visitas" />
           <AssociationSet Name="FK_Table_1_Digitadores" Association="Self.FK_Table_1_Digitadores">
             <End Role="Digitadores" EntitySet="Digitadores" />
+            <End Role="Table_1" EntitySet="Table_1" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_1_Entrevista" Association="Self.FK_Table_1_Entrevista">
+            <End Role="Entrevista" EntitySet="Entrevista" />
             <End Role="Table_1" EntitySet="Table_1" />
           </AssociationSet>
           <AssociationSet Name="FK_Table_1_Indicadores" Association="Self.FK_Table_1_Indicadores">
@@ -723,7 +775,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="AuditoriaPOAModelStoreContainer" CdmEntityContainer="AuditoriaPOAEntities1">
+        <EntityContainerMapping StorageEntityContainer="AuditoriaPOAModelStoreContainer" CdmEntityContainer="AuditoriaPOAEntities2">
           <EntitySetMapping Name="Digitadores">
             <EntityTypeMapping TypeName="AuditoriaPOAModel.Digitadores">
               <MappingFragment StoreEntitySet="Digitadores">
@@ -732,6 +784,14 @@
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Telefono" ColumnName="Telefono" />
                 <ScalarProperty Name="Clave" ColumnName="Clave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Entrevista">
+            <EntityTypeMapping TypeName="AuditoriaPOAModel.Entrevista">
+              <MappingFragment StoreEntitySet="Entrevista">
+                <ScalarProperty Name="entrevistaPk" ColumnName="entrevistaPk" />
+                <ScalarProperty Name="TipoEntrevista" ColumnName="TipoEntrevista" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -859,6 +919,7 @@
                 <ScalarProperty Name="Digitador" ColumnName="Digitador" />
                 <ScalarProperty Name="Dia" ColumnName="Dia" />
                 <ScalarProperty Name="Mes" ColumnName="Mes" />
+                <ScalarProperty Name="EntrevistaFk" ColumnName="EntrevistaFk" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
