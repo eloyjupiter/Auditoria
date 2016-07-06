@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AuditoriaPOAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Digitadores">
+    <Key>
+      <PropertyRef Name="DigitadorPk" />
+    </Key>
+    <Property Name="DigitadorPk" Type="int" Nullable="false" />
+    <Property Name="Digitador" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Telefono" Type="varchar" MaxLength="50" />
+    <Property Name="Clave" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Indicadores">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Indicador" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P10Re">
+    <Key>
+      <PropertyRef Name="P10Pk" />
+    </Key>
+    <Property Name="P10Pk" Type="int" Nullable="false" />
+    <Property Name="P10R" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P12Re">
+    <Key>
+      <PropertyRef Name="P12Pk" />
+    </Key>
+    <Property Name="P12Pk" Type="int" Nullable="false" />
+    <Property Name="P12R" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P1Sexo">
+    <Key>
+      <PropertyRef Name="SexoPk" />
+    </Key>
+    <Property Name="SexoPk" Type="int" Nullable="false" />
+    <Property Name="Sexo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P2Re">
+    <Key>
+      <PropertyRef Name="P2Pk" />
+    </Key>
+    <Property Name="P2Pk" Type="int" Nullable="false" />
+    <Property Name="P2R" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P3bRe">
+    <Key>
+      <PropertyRef Name="P3bPk" />
+    </Key>
+    <Property Name="P3bPk" Type="int" Nullable="false" />
+    <Property Name="P3bR" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P4Re">
+    <Key>
+      <PropertyRef Name="P4Pk" />
+    </Key>
+    <Property Name="P4Pk" Type="int" Nullable="false" />
+    <Property Name="P4R" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P7Re">
+    <Key>
+      <PropertyRef Name="P7Pk" />
+    </Key>
+    <Property Name="P7Pk" Type="int" Nullable="false" />
+    <Property Name="P7R" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Provincias">
+    <Key>
+      <PropertyRef Name="ProvPk" />
+    </Key>
+    <Property Name="RegFk" Type="int" Nullable="false" />
+    <Property Name="ProvPk" Type="int" Nullable="false" />
+    <Property Name="Provincia" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Regiones">
+    <Key>
+      <PropertyRef Name="RegId" />
+    </Key>
+    <Property Name="RegId" Type="int" Nullable="false" />
+    <Property Name="Region" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Table_1">
+    <Key>
+      <PropertyRef Name="NCuest" />
+      <PropertyRef Name="Trimestre" />
+      <PropertyRef Name="Año" />
+    </Key>
+    <Property Name="NCuest" Type="int" Nullable="false" />
+    <Property Name="Trimestre" Type="int" Nullable="false" />
+    <Property Name="Año" Type="int" Nullable="false" />
+    <Property Name="Region" Type="int" Nullable="false" />
+    <Property Name="Provincia" Type="int" Nullable="false" />
+    <Property Name="Municipio" Type="int" />
+    <Property Name="DistritoMunicipal" Type="int" />
+    <Property Name="PersonaEntrevistada" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Responsable" Type="varchar" MaxLength="500" />
+    <Property Name="P1" Type="int" Nullable="false" />
+    <Property Name="P2" Type="int" Nullable="false" />
+    <Property Name="P3a" Type="int" Nullable="false" />
+    <Property Name="P3b" Type="int" Nullable="false" />
+    <Property Name="P4" Type="int" />
+    <Property Name="P5" Type="varchar" MaxLength="500" />
+    <Property Name="P6" Type="varchar" MaxLength="500" />
+    <Property Name="P7" Type="int" />
+    <Property Name="P8" Type="varchar" MaxLength="500" />
+    <Property Name="P9" Type="varchar" MaxLength="500" />
+    <Property Name="P10" Type="int" Nullable="false" />
+    <Property Name="P11" Type="varchar" MaxLength="500" />
+    <Property Name="P12" Type="int" Nullable="false" />
+    <Property Name="P12b" Type="varchar" MaxLength="50" />
+    <Property Name="P13" Type="int" />
+    <Property Name="P14" Type="varchar" MaxLength="500" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+    <Property Name="Digitador" Type="int" Nullable="false" />
+    <Property Name="Dia" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Mes" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Visitas">
+    <Key>
+      <PropertyRef Name="VisitaPk" />
+    </Key>
+    <Property Name="VisitaPk" Type="int" Nullable="false" />
+    <Property Name="Visita" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Table_1_Digitadores">
+    <End Role="Digitadores" Type="Self.Digitadores" Multiplicity="1" />
+    <End Role="Table_1" Type="Self.Table_1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Digitadores">
+        <PropertyRef Name="DigitadorPk" />
+      </Principal>
+      <Dependent Role="Table_1">
+        <PropertyRef Name="Digitador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_Indicadores">
+    <End Role="Indicadores" Type="Self.Indicadores" Multiplicity="1" />
+    <End Role="Table_1" Type="Self.Table_1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Indicadores">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Table_1">
+        <PropertyRef Name="P3a" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_P10R">
+    <End Role="P10Re" Type="Self.P10Re" Multiplicity="1" />
+    <End Role="Table_1" Type="Self.Table_1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P10Re">
+        <PropertyRef Name="P10Pk" />
+      </Principal>
+      <Dependent Role="Table_1">
+        <PropertyRef Name="P10" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_P12R">
+    <End Role="P12Re" Type="Self.P12Re" Multiplicity="1" />
+    <End Role="Table_1" Type="Self.Table_1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P12Re">
+        <PropertyRef Name="P12Pk" />
+      </Principal>
+      <Dependent Role="Table_1">
+        <PropertyRef Name="P12" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_P2R">
+    <End Role="P2Re" Type="Self.P2Re" Multiplicity="1" />
+    <End Role="Table_1" Type="Self.Table_1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P2Re">
+        <PropertyRef Name="P2Pk" />
+      </Principal>
+      <Dependent Role="Table_1">
+        <PropertyRef Name="P2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_P3bR">
+    <End Role="P3bRe" Type="Self.P3bRe" Multiplicity="1" />
+    <End Role="Table_1" Type="Self.Table_1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P3bRe">
+        <PropertyRef Name="P3bPk" />
+      </Principal>
+      <Dependent Role="Table_1">
+        <PropertyRef Name="P3b" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_P4R">
+    <End Role="P4Re" Type="Self.P4Re" Multiplicity="0..1" />
+    <End Role="Table_1" Type="Self.Table_1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P4Re">
+        <PropertyRef Name="P4Pk" />
+      </Principal>
+      <Dependent Role="Table_1">
+        <PropertyRef Name="P4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_P7R">
+    <End Role="P7Re" Type="Self.P7Re" Multiplicity="0..1" />
+    <End Role="Table_1" Type="Self.Table_1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P7Re">
+        <PropertyRef Name="P7Pk" />
+      </Principal>
+      <Dependent Role="Table_1">
+        <PropertyRef Name="P7" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_Provincias">
+    <End Role="Provincias" Type="Self.Provincias" Multiplicity="1" />
+    <End Role="Table_1" Type="Self.Table_1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincias">
+        <PropertyRef Name="ProvPk" />
+      </Principal>
+      <Dependent Role="Table_1">
+        <PropertyRef Name="Provincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_Regiones">
+    <End Role="Regiones" Type="Self.Regiones" Multiplicity="1" />
+    <End Role="Table_1" Type="Self.Table_1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regiones">
+        <PropertyRef Name="RegId" />
+      </Principal>
+      <Dependent Role="Table_1">
+        <PropertyRef Name="Region" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_Sexo">
+    <End Role="P1Sexo" Type="Self.P1Sexo" Multiplicity="1" />
+    <End Role="Table_1" Type="Self.Table_1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P1Sexo">
+        <PropertyRef Name="SexoPk" />
+      </Principal>
+      <Dependent Role="Table_1">
+        <PropertyRef Name="P1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_1_Visitas">
+    <End Role="Visitas" Type="Self.Visitas" Multiplicity="0..1" />
+    <End Role="Table_1" Type="Self.Table_1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Visitas">
+        <PropertyRef Name="VisitaPk" />
+      </Principal>
+      <Dependent Role="Table_1">
+        <PropertyRef Name="P13" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AuditoriaPOAModelStoreContainer">
+    <EntitySet Name="Digitadores" EntityType="Self.Digitadores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Indicadores" EntityType="Self.Indicadores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P10Re" EntityType="Self.P10Re" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P12Re" EntityType="Self.P12Re" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P1Sexo" EntityType="Self.P1Sexo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P2Re" EntityType="Self.P2Re" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P3bRe" EntityType="Self.P3bRe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P4Re" EntityType="Self.P4Re" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P7Re" EntityType="Self.P7Re" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Provincias" EntityType="Self.Provincias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Regiones" EntityType="Self.Regiones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_1" EntityType="Self.Table_1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Visitas" EntityType="Self.Visitas" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Table_1_Digitadores" Association="Self.FK_Table_1_Digitadores">
+      <End Role="Digitadores" EntitySet="Digitadores" />
+      <End Role="Table_1" EntitySet="Table_1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_Indicadores" Association="Self.FK_Table_1_Indicadores">
+      <End Role="Indicadores" EntitySet="Indicadores" />
+      <End Role="Table_1" EntitySet="Table_1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_P10R" Association="Self.FK_Table_1_P10R">
+      <End Role="P10Re" EntitySet="P10Re" />
+      <End Role="Table_1" EntitySet="Table_1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_P12R" Association="Self.FK_Table_1_P12R">
+      <End Role="P12Re" EntitySet="P12Re" />
+      <End Role="Table_1" EntitySet="Table_1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_P2R" Association="Self.FK_Table_1_P2R">
+      <End Role="P2Re" EntitySet="P2Re" />
+      <End Role="Table_1" EntitySet="Table_1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_P3bR" Association="Self.FK_Table_1_P3bR">
+      <End Role="P3bRe" EntitySet="P3bRe" />
+      <End Role="Table_1" EntitySet="Table_1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_P4R" Association="Self.FK_Table_1_P4R">
+      <End Role="P4Re" EntitySet="P4Re" />
+      <End Role="Table_1" EntitySet="Table_1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_P7R" Association="Self.FK_Table_1_P7R">
+      <End Role="P7Re" EntitySet="P7Re" />
+      <End Role="Table_1" EntitySet="Table_1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_Provincias" Association="Self.FK_Table_1_Provincias">
+      <End Role="Provincias" EntitySet="Provincias" />
+      <End Role="Table_1" EntitySet="Table_1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_Regiones" Association="Self.FK_Table_1_Regiones">
+      <End Role="Regiones" EntitySet="Regiones" />
+      <End Role="Table_1" EntitySet="Table_1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_Sexo" Association="Self.FK_Table_1_Sexo">
+      <End Role="P1Sexo" EntitySet="P1Sexo" />
+      <End Role="Table_1" EntitySet="Table_1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_1_Visitas" Association="Self.FK_Table_1_Visitas">
+      <End Role="Visitas" EntitySet="Visitas" />
+      <End Role="Table_1" EntitySet="Table_1" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
