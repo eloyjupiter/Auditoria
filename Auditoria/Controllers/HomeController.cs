@@ -14,7 +14,7 @@ namespace Auditoria.Controllers
         // GET: Home
         public ActionResult Index()
         {
-           //example
+           //
             return View();
         }
     }
