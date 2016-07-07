@@ -39,7 +39,7 @@ namespace Auditoria.Models
         public string P12b { get; set; }
         public Nullable<int> P13 { get; set; }
         public string P14 { get; set; }
-        public System.DateTime Time { get; set; }
+        public Nullable<System.DateTime> Time { get; set; }
         public int Digitador { get; set; }
         public string Dia { get; set; }
         public string Mes { get; set; }

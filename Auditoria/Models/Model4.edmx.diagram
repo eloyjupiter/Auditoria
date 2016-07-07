@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="629c1a0e2eb64ed28e46115941c13540" Name="Diagram1" ZoomLevel="59">
+      <Diagram DiagramId="92e08e239ee0439bacc7e82daabba1fc" Name="Diagram1" ZoomLevel="61">
         <EntityTypeShape EntityType="AuditoriaPOAModel.Digitadores" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AuditoriaPOAModel.Entrevista" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="AuditoriaPOAModel.Indicadores" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />

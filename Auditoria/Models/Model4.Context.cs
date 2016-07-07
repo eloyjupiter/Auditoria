@@ -13,10 +13,10 @@ namespace Auditoria.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AuditoriaPOAEntities2 : DbContext
+    public partial class AuditoriaPOAEntities4 : DbContext
     {
-        public AuditoriaPOAEntities2()
-            : base("name=AuditoriaPOAEntities2")
+        public AuditoriaPOAEntities4()
+            : base("name=AuditoriaPOAEntities4")
         {
         }
     
