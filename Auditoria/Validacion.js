@@ -14,6 +14,17 @@
     return true;
 }
 
+function validarp3b(elemento, elemento1,elemento2) {
+    var a = document.getElementById(elemento).value;
+
+    if (a == 2 ) {
+        document.getElementById(elemento1).focus();
+    }
+    else {
+        document.getElementById(elemento2).focus();
+    }
+}
+
 function validarRegion(elemento, elemento1) {
     var a = document.getElementById(elemento).value;
 
@@ -129,5 +140,30 @@ function validarProvincia(region, provincia, siguiente) {
             document.getElementById(elemento).focus();
         }
     }
-    
 }
+function limpiarpantalla() {
+    
+        document.getElementById('ncuest').value = "";
+        document.getElementById('entrev').value = "";
+        document.getElementById('resp').value = "";
+        document.getElementById('p1').value = "";
+        document.getElementById('p2').value = "";
+        document.getElementById('p3a').value = "";
+        document.getElementById('p3b').value = "";
+        document.getElementById('p4').value = "";
+        document.getElementById('p5').value = "";
+        document.getElementById('p6').value = "";
+        document.getElementById('p7').value = "";
+        document.getElementById('p8').value = "";
+        document.getElementById('p9').value = "";
+        document.getElementById('p10').value = "";
+        document.getElementById('p11').value = "";
+        document.getElementById('p12a').value = "";
+        document.getElementById('p12b').value = "";
+        document.getElementById('p13').value = "";
+        document.getElementById('p14').value = "";
+        document.getElementById('ent').value = "";
+    //}
+
+}
+

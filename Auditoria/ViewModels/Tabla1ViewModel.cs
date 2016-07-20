@@ -36,6 +36,7 @@ namespace Auditoria.ViewModels
         public string P14 { get; set; }
         public int Digitador { get; set; }
         public int Entrevista { get; set; }
+        public string letrero { get; set; }
 
         public IEnumerable<SelectListItem> Regs { get; set; }
         public IEnumerable<SelectListItem> Provs { get; set; }

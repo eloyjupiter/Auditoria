@@ -4,12 +4,49 @@
 }
 
 <h2>Index</h2>
-
+<label id="letrero"></label>
+<script>
+    //document.getElementById('letrero').innerText = "Prueba";
+</script>
+<h2></h2>
 @*@Html.DropDownListFor(m => m.Reg, Model.Regs)
 @Html.DropDownListFor(m=>m.Prov,Model.Provs)*@
 
+@*<script>
+    //window.onload = 
+    function limpiarpantalla () {
+        //document.getElementById('letrero').innerText = "Prueba";
+        document.getElementById('ncuest').value = "";
+        document.getElementById('entrev').value = "";
+        document.getElementById('resp').value = "";
+        document.getElementById('p1').value = "";
+        document.getElementById('p2').value = "";
+        document.getElementById('p3a').value = "";
+        document.getElementById('p3b').value = "";
+        document.getElementById('p4').value = "";
+        document.getElementById('p5').value = "";
+        document.getElementById('p6').value = "";
+        document.getElementById('p7').value = "";
+        document.getElementById('p8').value = "";
+        document.getElementById('p9').value = "";
+        document.getElementById('p10').value = "";
+        document.getElementById('p11').value = "";
+        document.getElementById('p12a').value = "";
+        document.getElementById('p12b').value = "";
+        document.getElementById('p13').value = "";
+        document.getElementById('p14').value = "";
+        document.getElementById('ent').value = "";
+    }
+
+
+
+</script>*@
+
+
+
 @using (Html.BeginForm())
 {
+    
     <div class="row">
         <div class="col-sm-1">
             <h5>NCuest</h5>
@@ -173,16 +210,19 @@
                         <h5>Entrevista:</h5>
                     </div>
                     <div class="col-sm-1">
-                        @Html.TextBoxFor(m => m.Entrevista, new { style = "width:30px", id = "dig", tabindex = "25", onkeydown = "return tab(this, event)" })
+                        @Html.TextBoxFor(m => m.Entrevista, new { style = "width:30px", id = "ent", tabindex = "25", onkeydown = "return tab(this, event)" })
                     </div>
+                    
                 </div>
 
 
 
+                
 
 
-
-                    <input tabindex="25" , type="submit" value="Enviar" />
+                    <input tabindex="26", type="submit" value="Enviar" />
                     }
+<br />
+<button onclick="limpiarpantalla()">Limpiar Pantalla</button>
 
                     <script src="~/Validacion.js"></script>
