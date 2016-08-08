@@ -3,226 +3,296 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Auditoria POA</h2>
 <label id="letrero"></label>
 <script>
     //document.getElementById('letrero').innerText = "Prueba";
 </script>
 <h2></h2>
 @*@Html.DropDownListFor(m => m.Reg, Model.Regs)
-@Html.DropDownListFor(m=>m.Prov,Model.Provs)*@
+    @Html.DropDownListFor(m=>m.Prov,Model.Provs)*@
 
 @*<script>
-    //window.onload = 
-    function limpiarpantalla () {
-        //document.getElementById('letrero').innerText = "Prueba";
-        document.getElementById('ncuest').value = "";
-        document.getElementById('entrev').value = "";
-        document.getElementById('resp').value = "";
-        document.getElementById('p1').value = "";
-        document.getElementById('p2').value = "";
-        document.getElementById('p3a').value = "";
-        document.getElementById('p3b').value = "";
-        document.getElementById('p4').value = "";
-        document.getElementById('p5').value = "";
-        document.getElementById('p6').value = "";
-        document.getElementById('p7').value = "";
-        document.getElementById('p8').value = "";
-        document.getElementById('p9').value = "";
-        document.getElementById('p10').value = "";
-        document.getElementById('p11').value = "";
-        document.getElementById('p12a').value = "";
-        document.getElementById('p12b').value = "";
-        document.getElementById('p13').value = "";
-        document.getElementById('p14').value = "";
-        document.getElementById('ent').value = "";
-    }
+        //window.onload =
+        function limpiarpantalla () {
+            //document.getElementById('letrero').innerText = "Prueba";
+            document.getElementById('ncuest').value = "";
+            document.getElementById('entrev').value = "";
+            document.getElementById('resp').value = "";
+            document.getElementById('p1').value = "";
+            document.getElementById('p2').value = "";
+            document.getElementById('p3a').value = "";
+            document.getElementById('p3b').value = "";
+            document.getElementById('p4').value = "";
+            document.getElementById('p5').value = "";
+            document.getElementById('p6').value = "";
+            document.getElementById('p7').value = "";
+            document.getElementById('p8').value = "";
+            document.getElementById('p9').value = "";
+            document.getElementById('p10').value = "";
+            document.getElementById('p11').value = "";
+            document.getElementById('p12a').value = "";
+            document.getElementById('p12b').value = "";
+            document.getElementById('p13').value = "";
+            document.getElementById('p14').value = "";
+            document.getElementById('ent').value = "";
+        }
 
 
 
-</script>*@
+    </script>*@
 
 
 
 @using (Html.BeginForm())
 {
-    
+
+
     <div class="row">
-        <div class="col-sm-1">
-            <h5>NCuest</h5>
-        </div>
-        <div class="col-sm-1">
-            @Html.TextBoxFor(m => m.ncuest, new { style = "width:60px", tabindex = "1", id = "ncuest", onkeydown = "return tab(this, event)" })
-        </div>
-        <div class="col-sm-1">
-            <h5>Región</h5>
-        </div>
-        <div class="col-sm-1">
-            @Html.TextBoxFor(m => m.Reg, new { style = "width:30px", tabindex = "2", id = "reg", oninput = "validarRegion('reg','prov')", onkeydown = "return tab(this, event)" })
-        </div>
-        <div class="col-sm-1">
-            <h5>Provincia</h5>
-        </div>
-        <div class="col-sm-1">
-            @Html.TextBoxFor(m => m.Prov, new { style = "width:30px", tabindex = "3", id = "prov", oninput = "validarProvincia('reg','prov','trim')", onkeydown = "return tab(this, event)" })
-        </div>
-        <div class="col-sm-1">
-            <h5>Trimestre:</h5>
-        </div>
-                <div class="col-sm-1">
-                    @Html.TextBoxFor(m => m.Trimestre, new { style = "width:30px", id = "trim", tabindex = "4", onkeydown = "return tab(this, event)" })
-                </div>
-        <div class="col-sm-1">
-            <h5>Año:</h5>
-        </div>
-                <div class="col-sm-1">
-                    @Html.TextBoxFor(m => m.Año, new { style = "width:60px", id = "año", tabindex = "5", onkeydown = "return tab(this, event)" })
-                </div>
-        <div class="col-sm-1">
-            <h5>Persona entrevistada:</h5>
-        </div>
-        <div class="col-sm-1">
-            @Html.TextBoxFor(m => m.Entrevistada, new { style = "width:90px", id = "entrev", tabindex = "6", onkeydown = "return tab(this, event)" })
-        </div>
-       
-        </div>
+        <div class="col-lg-10">
 
-        <div class="row">
-            <div class="col-sm-1">
-                <h5>Persona responsable:</h5>
-            </div>
-            <div class="col-sm-1">
-                @Html.TextBoxFor(m => m.Responsable, new { style = "width:90px", id = "resp", tabindex = "7", onkeydown = "return tab(this, event)" })
-            </div>
-            <div class="col-sm-1">
-                <h5>P1:</h5>
-            </div>
-            <div class="col-sm-1">
-                @Html.TextBoxFor(m => m.P1, new { style = "width:30px", id = "p1", tabindex = "8", onkeydown = "return tab(this, event)" })
-            </div>
-            <div class="col-sm-1">
-                <h5>P2:</h5>
-            </div>
-            <div class="col-sm-1">
-                @Html.TextBoxFor(m => m.P2, new { style = "width:30px", id = "p2", tabindex = "9", onkeydown = "return tab(this, event)" })
-            </div>
-            <div class="col-sm-1">
-                <h5>P3a:</h5>
-            </div>
-            <div class="col-sm-1">
-                @Html.TextBoxFor(m => m.P3a, new { style = "width:30px", id = "p3a", tabindex = "10", onkeydown = "return tab(this, event)" })
-            </div>
-            <div class="col-sm-1">
-                <h5>P3b:</h5>
-            </div>
-            <div class="col-sm-1">
-                @Html.TextBoxFor(m => m.P3b, new { style = "width:30px", id = "p3b", tabindex = "11", onkeydown = "return tab(this, event)" })
-            </div>
-            <div class="col-sm-1">
-                <h5>P4:</h5>
-            </div>
-            <div class="col-sm-1">
-                @Html.TextBoxFor(m => m.P4, new { style = "width:30px", id = "p4", tabindex = "12", onkeydown = "return tab(this, event)" })
-            </div>
-            
-            </div>
-            <div class="row">
-                <div class="col-sm-1">
-                    <h5>P5:</h5>
+            <div class="panel panel-primary">
+                <div class="panel-heading"><span class="glyphicon glyphicon-info-sign"></span>         Informacion Geografica</div>
+                <div class="panel-body">
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">#Cuest</label>
+                                @Html.TextBoxFor(m => m.ncuest, new { tabindex = "1", id = "ncuest", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Región</label>
+                                @Html.TextBoxFor(m => m.Reg, new { tabindex = "2", id = "reg", oninput = "validarRegion('reg','prov')", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Provincia</label>
+                                @Html.TextBoxFor(m => m.Prov, new { tabindex = "3", id = "prov", oninput = "validarProvincia('reg','prov','trim')", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Trimestre</label>
+                                @Html.TextBoxFor(m => m.Trimestre, new { id = "trim", tabindex = "4", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Año</label>
+                                @Html.TextBoxFor(m => m.Año, new { id = "año", tabindex = "5", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Persona entrevistada</label>
+                                @Html.TextBoxFor(m => m.Entrevistada, new { id = "entrev", tabindex = "6", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Persona responsable</label>
+                                @Html.TextBoxFor(m => m.Responsable, new { id = "resp", tabindex = "7", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
-                <div class="col-sm-1">
-                    @Html.TextAreaFor(m => m.P5, new { style = "width:90px", id = "p5", tabindex = "13", onkeydown = "return tab(this, event)" })
-                </div>
-                <div class="col-sm-1">
-                    <h5>P6:</h5>
-                </div>
-                <div class="col-sm-1">
-                    @Html.TextAreaFor(m => m.P6, new { style = "width:90px", id = "p6", tabindex = "14", onkeydown = "return tab(this, event)" })
-                </div>
-                <div class="col-sm-1">
-                    <h5>P7:</h5>
-                </div>
-                <div class="col-sm-1">
-                    @Html.TextBoxFor(m => m.P7, new { style = "width:30px", id = "p7", tabindex = "15", onkeydown = "return tab(this, event)" })
-                </div>
-                <div class="col-sm-1">
-                    <h5>P8:</h5>
-                </div>
-                <div class="col-sm-1">
-                    @Html.TextAreaFor(m => m.P8, new { style = "width:90px", id = "p8", tabindex = "16", onkeydown = "return tab(this, event)" })
-                </div>
-                <div class="col-sm-1">
-                    <h5>P9:</h5>
-                </div>
-                <div class="col-sm-1">
-                    @Html.TextAreaFor(m => m.P9, new { style = "width:90px", id = "p9", tabindex = "17", onkeydown = "return tab(this, event)" })
-                </div>
-                <div class="col-sm-1">
-                    <h5>P10:</h5>
-                </div>
-                <div class="col-sm-1">
-                    @Html.TextBoxFor(m => m.P10, new { style = "width:30px", id = "p10", tabindex = "18", onkeydown = "return tab(this, event)" })
-                </div>
-                
             </div>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-10">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading"><span class="glyphicon glyphicon-question-sign"></span>         Cuestionario</div>
+                <div class="panel-body">
+
+                    <div class="row">
+
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #1</label>
+                                @Html.TextBoxFor(m => m.P1, new { id = "p1", tabindex = "8", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #2</label>
+                                @Html.TextBoxFor(m => m.P2, new { id = "p2", tabindex = "9", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #3A</label>
+                                @Html.TextBoxFor(m => m.P3a, new { id = "p3a", tabindex = "10", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #3B</label>
+                                @Html.TextBoxFor(m => m.P3b, new { id = "p3b", tabindex = "11", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #4</label>
+                                @Html.TextBoxFor(m => m.P4, new { id = "p4", tabindex = "12", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #5</label>
+                                @Html.TextAreaFor(m => m.P5, new { id = "p5", tabindex = "13", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #6</label>
+                                @Html.TextAreaFor(m => m.P6, new { id = "p6", tabindex = "14", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #7</label>
+                                @Html.TextBoxFor(m => m.P7, new { id = "p7", tabindex = "15", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #8</label>
+                                @Html.TextAreaFor(m => m.P8, new { id = "p8", tabindex = "16", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #9</label>
+                                @Html.TextAreaFor(m => m.P9, new { id = "p9", tabindex = "17", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #10</label>
+                                @Html.TextBoxFor(m => m.P10, new { id = "p10", tabindex = "18", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #11</label>
+                                @Html.TextAreaFor(m => m.P11, new { id = "p11", tabindex = "19", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #12A</label>
+                                @Html.TextBoxFor(m => m.P12a, new { id = "p12a", tabindex = "20", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #12B</label>
+                                @Html.TextBoxFor(m => m.P12b, new { id = "p12b", tabindex = "21", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #13</label>
+                                @Html.TextBoxFor(m => m.P13, new { id = "p13", tabindex = "22", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Pregunta #14</label>
+                                @Html.TextAreaFor(m => m.P14, new { id = "p14", tabindex = "23", onkeydown = "return tab(this, event)", @class = "form-control" })
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
     <br />
-                <div class="row">
-                    <div class="col-sm-1">
-                        <h5>P11:</h5>
+
+
+
+
+    <div class="row">
+        <div class="col-lg-10">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading"><span class="glyphicon glyphicon-user"></span>         Firma</div>
+                <div class="panel-body">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Digitador/a</label>
+
+                            @Html.TextBoxFor(m => m.Digitador, new { id = "dig", tabindex = "24", onkeydown = "return tab(this, event)", @class = "form-control" })
+                        </div>
                     </div>
-                    <div class="col-sm-1">
-                        @Html.TextAreaFor(m => m.P11, new { style = "width:90px", id = "p11", tabindex = "19", onkeydown = "return tab(this, event)" })
-                    </div>
-                    <div class="col-sm-1">
-                        <h5>P12a:</h5>
-                    </div>
-                    <div class="col-sm-1">
-                        @Html.TextBoxFor(m => m.P12a, new { style = "width:30px", id = "p12a", tabindex = "20", onkeydown = "return tab(this, event)" })
-                    </div>
-                    <div class="col-sm-1">
-                        <h5>P12b:</h5>
-                    </div>
-                    <div class="col-sm-1">
-                        @Html.TextBoxFor(m => m.P12b, new { style = "width:90px", id = "p12b", tabindex = "21", onkeydown = "return tab(this, event)" })
-                    </div>
-                    <div class="col-sm-1">
-                        <h5>P13:</h5>
-                    </div>
-                    <div class="col-sm-1">
-                        @Html.TextBoxFor(m => m.P13, new { style = "width:30px", id = "p13", tabindex = "22", onkeydown = "return tab(this, event)" })
-                    </div>
-                    <div class="col-sm-1">
-                        <h5>P14:</h5>
-                    </div>
-                    <div class="col-sm-1">
-                        @Html.TextAreaFor(m => m.P14, new { style = "width:90px", id = "p14", tabindex = "23", onkeydown = "return tab(this, event)" })
-                    </div>
-                    <div class="col-sm-1">
-                        <h5>Digitador/a:</h5>
-                    </div>
-                    <div class="col-sm-1">
-                        @Html.TextBoxFor(m => m.Digitador, new { style = "width:30px", id = "dig", tabindex = "24", onkeydown = "return tab(this, event)" })
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Entrevista</label>
+                            @Html.TextBoxFor(m => m.Entrevista, new { id = "ent", tabindex = "25", onkeydown = "return tab(this, event)", @class = "form-control" })
+                        </div>
                     </div>
                 </div>
-                <br />
-                <div class="row">
-                    <div class="col-sm-1">
-                        <h5>Entrevista:</h5>
-                    </div>
-                    <div class="col-sm-1">
-                        @Html.TextBoxFor(m => m.Entrevista, new { style = "width:30px", id = "ent", tabindex = "25", onkeydown = "return tab(this, event)" })
-                    </div>
-                    
-                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-4 pull-right">
+
+
+            <button input tabindex="26" type="submit" class="btn btn-success" value="Enviar"><span class="glyphicon glyphicon-send"></span>    Enviar </button>
+
+            <!-- Secondary, outline button -->
+            <button onclick="limpiarpantalla()" class="btn btn-danger" type="button"><span class="glyphicon glyphicon-remove"></span>   Limpiar</button>
+        </div>
+    </div>
 
 
 
-                
-
-
-                    <input tabindex="26", type="submit" value="Enviar" />
-                    }
+}
 <br />
-<button onclick="limpiarpantalla()">Limpiar Pantalla</button>
 
-                    <script src="~/Validacion.js"></script>
+
+<script src="~/Validacion.js"></script>
